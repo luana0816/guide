@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#FBF7F2">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#FBF7F2"/>
+    <text x="600" y="430" text-anchor="middle" font-family="Nanum Myeongjo, serif" font-weight="800" font-size="150" fill="#312A25">몸의 순환</text>
+    <text x="600" y="515" text-anchor="middle" font-family="Gowun Batang, serif" font-size="44" fill="#9A6244">자연임신 실전 가이드 앱</text>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css">
+<style>
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:#E5DDD3; font-family:"Pretendard Variable","Pretendard",system-ui,sans-serif; -webkit-font-smoothing:antialiased; word-break:keep-all; }
+  h1,h2,h3,h4,p,span,button,a,div,blockquote{ word-break:keep-all; }
+  .phone{ width:412px; height:892px; margin:0 auto; background:#FBF7F2; position:relative; overflow:hidden; box-shadow:0 12px 48px rgba(49,42,37,0.28); }
+  .scroll{ position:absolute; inset:0 0 76px 0; overflow-y:auto; -webkit-overflow-scrolling:touch; scroll-behavior:smooth; }
+  .scroll::-webkit-scrollbar{ width:0; }
+  a{ text-decoration:none; color:inherit; }
+</style>
+</helmet>
+
+<div class="phone">
+
+  <!-- ======= SCROLLING CONTENT ======= -->
+  <div class="scroll" id="scroll">
+
+    <!-- HERO -->
+    <section id="home" data-screen-label="홈" style="padding:64px 26px 40px; background:linear-gradient(180deg,#F6ECE3 0%,#FBF7F2 100%);">
+      <div style="display:flex; align-items:center; gap:9px; margin-bottom:26px;">
+        <span style="width:26px; height:1.5px; background:#B97A57;"></span>
+        <span style="font-size:11px; letter-spacing:0.26em; text-transform:uppercase; color:#9A6244; font-weight:600;">무료 배포용 산전 가이드</span>
+      </div>
+      <p style="font-family:'Gowun Batang',serif; font-size:16px; color:#5A5048; margin:0 0 6px;">44세, 단 2번 만에 찾아온</p>
+      <h1 style="font-family:'Nanum Myeongjo',serif; font-weight:800; font-size:42px; line-height:1.2; margin:0; letter-spacing:-0.02em; color:#312A25;">‘몸의 순환’이<br>만든 기적</h1>
+      <p style="font-family:'Gowun Batang',serif; font-size:17px; color:#9A6244; margin:16px 0 0; line-height:1.5;">자연임신을 준비하는 부부를 위한 실전 가이드</p>
+      <p style="font-size:13.5px; color:#938678; margin:22px 0 0; line-height:1.65;">체형교정 전문가가 직접 겪고 검증한 식단 · 독소 차단 · 임신 준비 루틴을 한 곳에 담았습니다. 아래 목차에서 원하는 파트로 바로 이동하세요.</p>
+
+      <div style="display:flex; flex-direction:column; gap:10px; margin-top:30px;">
+        <button onclick="{{ goLetter }}" style="text-align:left; border:none; cursor:pointer; background:#312A25; color:#fff; padding:16px 18px; border-radius:14px; font-family:inherit; display:flex; align-items:center; justify-content:space-between;">
+          <span style="font-size:14.5px; font-weight:600;">보내는 편지부터 읽기</span>
+          <span style="font-size:16px; color:#D9B89E;">→</span>
+        </button>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+          <button onclick="{{ goP1 }}" style="text-align:left; border:1px solid #EADACC; cursor:pointer; background:#fff; padding:14px 15px; border-radius:14px; font-family:inherit;">
+            <span style="display:block; font-family:'Nanum Myeongjo',serif; font-weight:800; font-size:19px; color:#B97A57; line-height:1;">01</span>
+            <span style="display:block; font-size:13px; font-weight:600; color:#312A25; margin-top:7px;">식단 비밀</span>
+          </button>
+          <button onclick="{{ goP2 }}" style="text-align:left; border:1px solid #EADACC; cursor:pointer; background:#fff; padding:14px 15px; border-radius:14px; font-family:inherit;">
+            <span style="display:block; font-family:'Nanum Myeongjo',serif; font-weight:800; font-size:19px; color:#B97A57; line-height:1;">02</span>
+            <span style="display:block; font-size:13px; font-weight:600; color:#312A25; margin-top:7px;">환경 호르몬</span>
+          </button>
+          <button onclick="{{ goP3 }}" style="text-align:left; border:1px solid #EADACC; cursor:pointer; background:#fff; padding:14px 15px; border-radius:14px; font-family:inherit;">
+            <span style="display:block; font-family:'Nanum Myeongjo',serif; font-weight:800; font-size:19px; color:#B97A57; line-height:1;">03</span>
+            <span style="display:block; font-size:13px; font-weight:600; color:#312A25; margin-top:7px;">준비 체크리스트</span>
+          </button>
+          <button onclick="{{ goP4 }}" style="text-align:left; border:1px solid #EADACC; cursor:pointer; background:#fff; padding:14px 15px; border-radius:14px; font-family:inherit;">
+            <span style="display:block; font-family:'Nanum Myeongjo',serif; font-weight:800; font-size:19px; color:#B97A57; line-height:1;">04</span>
+            <span style="display:block; font-size:13px; font-weight:600; color:#312A25; margin-top:7px;">추천 영상</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- LETTER -->
+    <section id="letter" data-screen-label="편지" style="padding:38px 26px 40px; border-top:10px solid #F2E8DF;">
+      <p style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#9A6244; font-weight:600; margin:0 0 10px;">보내는 편지</p>
+      <h2 style="font-family:'Nanum Myeongjo',serif; font-weight:800; font-size:25px; line-height:1.32; margin:0 0 20px; color:#312A25;">나이 탓 말고, 몸부터 준비해요</h2>
+      <p style="font-size:14.5px; line-height:1.8; color:#5A5048; margin:0 0 14px;">안녕하세요. 49살 남편과 함께 44살의 나이에(임신 당시 44세) 정말 감사하게도 단 두 번의 시도만에 자연임신에 성공한 체형교정 전문가입니다.</p>
+      <p style="font-size:14.5px; line-height:1.8; color:#5A5048; margin:0 0 14px;">요즘 불임이나 난임으로 고민하는 분들이 너무 많으시죠? 젊은 분들까지 오랜 시간 자연임신에 실패하고 초기 유산의 아픔을 겪는 모습을 볼 때마다 마음이 아팠습니다. 그래서 우리 부부의 찐 경험담과 비결을 담아 이 가이드를 만들었습니다.</p>
+      <blockquote style="margin:22px 0; padding:20px 22px; background:#F2E8DF; border-left:3px solid #B97A57; border-radius:2px;">
+        <p style="font-family:'Gowun Batang',serif; font-size:17px; line-height:1.6; color:#9A6244; margin:0; font-weight:700;">“다이어트도 식단이 9할, 운동이 1할.<br>자연임신도 결코 다르지 않습니다.”</p>
+      </blockquote>
+      <p style="font-size:14.5px; line-height:1.8; color:#5A5048; margin:0;">나이 탓 하며 조급해하지 마세요. 몸이 건강해야 건강한 정자와 난자가 만나고, 착상이 잘 되는 건강한 자궁이 만들어집니다. 오늘부터 저와 함께 ‘몸의 순환’을 가로막는 독소부터 끊어내 봐요!</p>
+    </section>
+
+    <!-- PART 1 -->
+    <section id="p1" data-screen-label="파트1 식단" style="padding:38px 26px 40px; border-top:10px solid #F2E8DF;">
+      <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+        <span style="font-family:'Nanum Myeongjo',serif; font-weight:800; font-size:38px; color:#EADACC; line-height:1;">01</span>
+        <div>
+          <p style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#9A6244; font-weight:600; margin:0 0 5px;">PART 1 · 식단</p>
+          <h2 style="font-family:'Nanum Myeongjo',serif; font-weight:800; font-size:21px; line-height:1.32; margin:0; color:#312A25;">몸의 순환을 깨우는 식단 비밀</h2>
+        </div>
+      </div>
+      <p style="font-size:14.5px; line-height:1.8; color:#5A5048; margin:8px 0 22px;">카니보어, 키토제닉, 설밀나튀 제한식까지 안 해본 식단 없이 몸소 겪고 정착한 우리 부부의 식단 노하우입니다.</p>
+
+      <div style="display:flex; gap:14px; padding:18px 0; border-top:1px solid #E7DBCF;">
+        <span style="flex:none; font-family:'Nanum Myeongjo',serif; font-weight:800; font-size:18px; color:#B97A57; width:20px;">1</span>
+        <div>
+          <h3 style="font-size:16px; font-weight:700; margin:0 0 7px; color:#312A25;">‘설밀나튀’를 철저히 제한</h3>
+          <p style="font-size:14px; line-height:1.75; color:#5A5048; margin:0;"><strong style="color:#9A6244;">설탕·밀가루·나쁜 기름(식용유)·튀김</strong>은 만성 염증을 일으키고 순환을 가로막는 주범입니다. 이 4가지만 걷어내도 몸이 몰라보게 따뜻해집니다.</p>
+        </div>
+      </div>
+      <div style="display:flex; gap:14px; padding:18px 0; border-top:1px solid #E7DBCF;">
+        <span style="flex:none; font-family:'Nanum Myeongjo',serif; font-weight:800; font-size:18px; color:#B97A57; width:20px;">2</span>
+        <div>
+          <h3 style="font-size:16px; font-weight:700; margin:0 0 10px; color:#312A25;">카니보어와 키토식의 유연한 병행</h3>
+          <p style="font-size:14px; line-height:1.7; color:#5A5048; margin:0 0 8px;"><strong style="color:#9A6244;">평소</strong> — 키토식(저탄고지)을 베이스로 질 좋은 지방(버터·코코넛 오일)을 충분히 섭취하며 설밀나튀 제한식 유지.</p>
+          <p style="font-size:14px; line-height:1.7; color:#5A5048; margin:0;"><strong style="color:#9A6244;">집중 관리</strong> — 독소를 빠르게 비우고 순환을 극대화하고 싶을 때 카니보어(고기 중심)를 집중 병행.</p>
+        </div>
+      </div>
+      <div style="display:flex; gap:14px; padding:18px 0; border-top:1px solid #E7DBCF; border-bottom:1px solid #E7DBCF;">
+        <span style="flex:none; font-family:'Nanum Myeongjo',serif; font-weight:800; font-size:18px; color:#B97A57; width:20px;">3</span>
+        <div>
+          <h3 style="font-size:16px; font-weight:700; margin:0 0 7px; color:#312A25;">스트레스 관리</h3>
+          <p style="font-size:14px; line-height:1.75; color:#5A5048; margin:0;">모임 자리까지 과하게 억제하면 오히려 스트레스로 순환이 더 막힙니다. 그런 자리에선 적당히 즐기고, 일상으로 돌아와 다시 철저히 지켜주세요.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PART 2 -->
+    <section id="p2" data-screen-label="파트2 환경호르몬" style="padding:38px 26px 40px; border-top:10px solid #F2E8DF;">
+      <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+        <span style="font-family:'Nanum Myeongjo',serif; font-weight:800; font-size:38px; color:#EADACC; line-height:1;">02</span>
+        <div>
+          <p style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#9A6244; font-weight:600; margin:0 0 5px;">PART 2 · 환경 호르몬</p>
+          <h2 style="font-family:'Nanum Myeongjo',serif; font-weight:800; font-size:21px; line-height:1.32; margin:0; color:#312A25;">미세플라스틱 독소 차단법</h2>
+        </div>
+      </div>
+      <p style="font-size:14.5px; line-height:1.8; color:#5A5048; margin:8px 0 20px;">식단은 신경 쓰면서도 ‘환경 호르몬’은 간과하기 쉽습니다. 깨끗한 자궁 환경을 위해 제가 목숨 걸고 실천한 루틴입니다.</p>
+      <div style="display:flex; gap:14px; padding:16px 18px; background:#F2E8DF; border-radius:14px; margin-bottom:12px;">
+        <span style="flex:none; width:8px; height:8px; border-radius:50%; background:#B97A57; margin-top:6px;"></span>
+        <div>
+          <h3 style="font-size:15.5px; font-weight:700; margin:0 0 6px; color:#312A25;">페트병 생수 마시지 않기</h3>
+          <p style="font-size:13.5px; line-height:1.7; color:#5A5048; margin:0;">식당에서도 페트병 물은 절대 마시지 않았습니다. 정수기 물이나 종이팩에 든 자연드림 ‘기픈물’을 직접 챙겨 다녔어요.</p>
+        </div>
+      </div>
+      <div style="display:flex; gap:14px; padding:16px 18px; background:#F2E8DF; border-radius:14px;">
+        <span style="flex:none; width:8px; height:8px; border-radius:50%; background:#B97A57; margin-top:6px;"></span>
+        <div>
+          <h3 style="font-size:15.5px; font-weight:700; margin:0 0 6px; color:#312A25;">플라스틱 용기 전면 교체</h3>
+          <p style="font-size:13.5px; line-height:1.7; color:#5A5048; margin:0;">집안의 모든 플라스틱 반찬 통과 용기를 유리 용기로 전면 교체했습니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PART 3 -->
+    <section id="p3" data-screen-label="파트3 체크리스트" style="padding:38px 26px 40px; border-top:10px solid #F2E8DF;">
+      <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+        <span style="font-family:'Nanum Myeongjo',serif; font-weight:800; font-size:38px; color:#EADACC; line-height:1;">03</span>
+        <div>
+          <p style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#9A6244; font-weight:600; margin:0 0 5px;">PART 3 · 체크리스트</p>
+          <h2 style="font-family:'Nanum Myeongjo',serif; font-weight:800; font-size:21px; line-height:1.32; margin:0; color:#312A25;">임신 준비 필수 체크리스트</h2>
+        </div>
+      </div>
+      <p style="font-size:13px; color:#938678; margin:8px 0 18px;">항목을 탭하면 체크됩니다 · 진행 상황은 자동 저장돼요</p>
+
+      <!-- checklist item: 영양제 -->
+      <div style="border-top:1px solid #E7DBCF;">
+        <button onclick="{{ toggle1 }}" style="width:100%; text-align:left; border:none; background:none; cursor:pointer; font-family:inherit; display:flex; gap:13px; padding:18px 0 4px;">
+          <span style="flex:none; width:23px; height:23px; border:2px solid {{ c1border }}; background:{{ c1bg }}; border-radius:6px; margin-top:1px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:14px; font-weight:800;">{{ c1mark }}</span>
+          <span style="font-size:16px; font-weight:700; color:#312A25; line-height:1.4;">3개월 전 부부 동반 영양제</span>
+        </button>
+      </div>
+      <div style="padding:0 0 18px 36px;">
+        <p style="font-size:14px; line-height:1.75; color:#5A5048; margin:6px 0 14px;">임신 준비는 아내 혼자 하는 게 아닙니다! 최소 3개월 전부터 부부가 ‘함께’ 챙겨야 건강한 정자와 난자가 완성됩니다.</p>
+        <div style="border:1px solid #E7DBCF; border-radius:12px; overflow:hidden;">
+          <div style="display:grid; grid-template-columns:52px 1fr; background:#EADACC;">
+            <div style="padding:9px 12px; font-size:11.5px; font-weight:700; color:#9A6244;">구분</div>
+            <div style="padding:9px 12px; font-size:11.5px; font-weight:700; color:#9A6244; border-left:1px solid #E7DBCF;">챙겨야 할 영양제</div>
+          </div>
+          <div style="display:grid; grid-template-columns:52px 1fr; border-top:1px solid #E7DBCF;">
+            <div style="padding:11px 12px; font-size:13px; font-weight:700; color:#312A25;">여자</div>
+            <div style="padding:11px 12px; font-size:13px; line-height:1.55; color:#5A5048; border-left:1px solid #E7DBCF;">엽산 · 비타민D · 오메가3 · 임신준비용 종합비타민</div>
+          </div>
+          <div style="display:grid; grid-template-columns:52px 1fr; border-top:1px solid #E7DBCF;">
+            <div style="padding:11px 12px; font-size:13px; font-weight:700; color:#312A25;">남자</div>
+            <div style="padding:11px 12px; font-size:13px; line-height:1.55; color:#5A5048; border-left:1px solid #E7DBCF;">아연 · 셀레늄 · 코큐텐 · 오메가3 · 비타민D</div>
+          </div>
+        </div>
+        <div style="margin-top:12px; padding:14px 16px; background:#F6ECEC; border:1px solid #E4CFCF; border-radius:12px;">
+          <p style="font-size:11.5px; font-weight:700; letter-spacing:0.03em; color:#B05A5A; margin:0 0 9px;">⚠ 피해야 할 것</p>
+          <p style="font-size:13px; line-height:1.6; color:#5A5048; margin:0 0 7px;"><strong style="color:#312A25;">여자</strong> — 비타민A 고용량, 레티놀 계열, 고함량 허브 제품은 조심.</p>
+          <p style="font-size:13px; line-height:1.6; color:#5A5048; margin:0;"><strong style="color:#312A25;">남자</strong> — 탈모약, 근육 호르몬제, 과음, 사우나, 노트북을 허벅지에 오래 두는 습관은 정자 질에 안 좋음.</p>
+        </div>
+      </div>
+
+      <!-- checklist item: 검사 -->
+      <div style="border-top:1px solid #E7DBCF;">
+        <button onclick="{{ toggle2 }}" style="width:100%; text-align:left; border:none; background:none; cursor:pointer; font-family:inherit; display:flex; gap:13px; padding:18px 0 4px;">
+          <span style="flex:none; width:23px; height:23px; border:2px solid {{ c2border }}; background:{{ c2bg }}; border-radius:6px; margin-top:1px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:14px; font-weight:800;">{{ c2mark }}</span>
+          <span style="font-size:16px; font-weight:700; color:#312A25; line-height:1.4;">부부 공통으로 먼저 확인하면 좋은 검사</span>
+        </button>
+      </div>
+      <div style="padding:0 0 18px 36px;">
+        <p style="font-size:14px; line-height:1.75; color:#5A5048; margin:6px 0 14px;">임신 준비 전에 병원에서 이 정도는 확인해두면 영양제 선택이 훨씬 정확해져요.</p>
+        <div style="border:1px solid #E7DBCF; border-radius:12px; overflow:hidden;">
+          <div style="display:grid; grid-template-columns:52px 1fr;">
+            <div style="padding:11px 12px; font-size:13px; font-weight:700; color:#312A25;">여자</div>
+            <div style="padding:11px 12px; font-size:13px; line-height:1.55; color:#5A5048; border-left:1px solid #E7DBCF;">비타민D · 페리틴/철분 · B12 · 갑상선(TSH/free T4) · 빈혈 수치 · AMH</div>
+          </div>
+          <div style="display:grid; grid-template-columns:52px 1fr; border-top:1px solid #E7DBCF;">
+            <div style="padding:11px 12px; font-size:13px; font-weight:700; color:#312A25;">남자</div>
+            <div style="padding:11px 12px; font-size:13px; line-height:1.55; color:#5A5048; border-left:1px solid #E7DBCF;">정액검사 · 비타민D · 아연/영양 상태 · 간수치 · 대사 건강</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- checklist item: 체형 -->
+      <div style="border-top:1px solid #E7DBCF; border-bottom:1px solid #E7DBCF;">
+        <button onclick="{{ toggle3 }}" style="width:100%; text-align:left; border:none; background:none; cursor:pointer; font-family:inherit; display:flex; gap:13px; padding:18px 0;">
+          <span style="flex:none; width:23px; height:23px; border:2px solid {{ c3border }}; background:{{ c3bg }}; border-radius:6px; margin-top:1px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:14px; font-weight:800;">{{ c3mark }}</span>
+          <span>
+            <span style="display:block; font-size:16px; font-weight:700; color:#312A25; line-height:1.4;">바른 체형 정렬 유지</span>
+            <span style="display:block; font-size:14px; line-height:1.7; color:#5A5048; margin-top:6px;">허리를 꺾고 배를 내미는 자세는 자궁 혈류 순환을 방해합니다. 골반 정렬을 바르게 세우는 인지가 필수예요.</span>
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <!-- PART 4 -->
+    <section id="p4" data-screen-label="파트4 추천영상" style="padding:38px 26px 46px; border-top:10px solid #F2E8DF;">
+      <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+        <span style="font-family:'Nanum Myeongjo',serif; font-weight:800; font-size:38px; color:#EADACC; line-height:1;">04</span>
+        <div>
+          <p style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#9A6244; font-weight:600; margin:0 0 5px;">PART 4 · 추천 영상</p>
+          <h2 style="font-family:'Nanum Myeongjo',serif; font-weight:800; font-size:21px; line-height:1.32; margin:0; color:#312A25;">검증한 추천 영상 리스트</h2>
+        </div>
+      </div>
+      <p style="font-size:13px; color:#938678; margin:8px 0 22px;">카드를 탭하면 유튜브 영상이 새 창에서 열립니다 ▶</p>
+
+      <!-- ortho -->
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+        <span style="font-size:11px; font-weight:700; color:#fff; background:#B97A57; padding:4px 10px; border-radius:100px;">신뢰도 100%</span>
+        <h3 style="font-size:15px; font-weight:700; margin:0; color:#312A25;">정형외과 의사 체형·정렬 관리</h3>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:9px; margin-bottom:24px;">
+        <a href="https://youtu.be/k49_O9_zOpQ" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:12px; padding:13px 15px; border:1px solid #E7DBCF; border-radius:13px; background:#fff;">
+          <span style="flex:none; width:34px; height:34px; border-radius:9px; background:#FDECEC; color:#E23B3B; display:flex; align-items:center; justify-content:center; font-size:13px;">▶</span>
+          <span style="font-size:13.5px; font-weight:600; color:#312A25; flex:1; line-height:1.4;">체형 및 정렬 관리 1</span>
+          <span style="flex:none; color:#B97A57; font-size:15px;">→</span>
+        </a>
+        <a href="https://youtu.be/lQoTRFQ7-gk" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:12px; padding:13px 15px; border:1px solid #E7DBCF; border-radius:13px; background:#fff;">
+          <span style="flex:none; width:34px; height:34px; border-radius:9px; background:#FDECEC; color:#E23B3B; display:flex; align-items:center; justify-content:center; font-size:13px;">▶</span>
+          <span style="font-size:13.5px; font-weight:600; color:#312A25; flex:1; line-height:1.4;">체형 및 정렬 관리 2</span>
+          <span style="flex:none; color:#B97A57; font-size:15px;">→</span>
+        </a>
+        <a href="https://youtu.be/f5ar-Wncr70" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:12px; padding:13px 15px; border:1px solid #E7DBCF; border-radius:13px; background:#fff;">
+          <span style="flex:none; width:34px; height:34px; border-radius:9px; background:#FDECEC; color:#E23B3B; display:flex; align-items:center; justify-content:center; font-size:13px;">▶</span>
+          <span style="font-size:13.5px; font-weight:600; color:#312A25; flex:1; line-height:1.4;">체형 및 정렬 관리 3</span>
+          <span style="flex:none; color:#B97A57; font-size:15px;">→</span>
+        </a>
+      </div>
+
+      <!-- diet -->
+      <h3 style="font-size:15px; font-weight:700; margin:0 0 12px; color:#312A25;">식단 · 독소 음식 관련</h3>
+      <div style="display:flex; flex-direction:column; gap:9px; margin-bottom:24px;">
+        <a href="https://www.youtube.com/watch?v=S2Gt-i6NhW0" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:12px; padding:12px 15px; border:1px solid #E7DBCF; border-radius:13px; background:#fff;">
+          <span style="flex:none; font-size:10.5px; font-weight:700; color:#9A6244; background:#F2E8DF; padding:3px 8px; border-radius:5px;">설밀나튀</span>
+          <span style="font-size:13px; font-weight:600; color:#312A25; flex:1; line-height:1.4;">다이어트할 때 제일 피해야 할 음식 4가지 (최겸 1부)</span>
+          <span style="flex:none; color:#B97A57; font-size:15px;">→</span>
+        </a>
+        <a href="https://www.youtube.com/watch?v=YICF_VzymFo" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:12px; padding:12px 15px; border:1px solid #E7DBCF; border-radius:13px; background:#fff;">
+          <span style="flex:none; font-size:10.5px; font-weight:700; color:#9A6244; background:#F2E8DF; padding:3px 8px; border-radius:5px;">설탕</span>
+          <span style="font-size:13px; font-weight:600; color:#312A25; flex:1; line-height:1.4;">대부분의 사람들이 살찌는 이유는 이겁니다</span>
+          <span style="flex:none; color:#B97A57; font-size:15px;">→</span>
+        </a>
+        <a href="https://youtu.be/ehqJiU_UCZ0" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:12px; padding:12px 15px; border:1px solid #E7DBCF; border-radius:13px; background:#fff;">
+          <span style="flex:none; font-size:10.5px; font-weight:700; color:#9A6244; background:#F2E8DF; padding:3px 8px; border-radius:5px;">밀가루</span>
+          <span style="font-size:13px; font-weight:600; color:#312A25; flex:1; line-height:1.4;">밀가루가 우리 몸에 미치는 영향</span>
+          <span style="flex:none; color:#B97A57; font-size:15px;">→</span>
+        </a>
+        <a href="https://www.youtube.com/watch?v=rNo8HGyzuZo" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:12px; padding:12px 15px; border:1px solid #E7DBCF; border-radius:13px; background:#fff;">
+          <span style="flex:none; font-size:10.5px; font-weight:700; color:#9A6244; background:#F2E8DF; padding:3px 8px; border-radius:5px;">나쁜기름</span>
+          <span style="font-size:13px; font-weight:600; color:#312A25; flex:1; line-height:1.4;">요리할 때 쓰면 안 되는 최악의 식용유</span>
+          <span style="flex:none; color:#B97A57; font-size:15px;">→</span>
+        </a>
+        <a href="https://www.youtube.com/watch?v=QmF06ogoEcU" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:12px; padding:12px 15px; border:1px solid #E7DBCF; border-radius:13px; background:#fff;">
+          <span style="flex:none; font-size:10.5px; font-weight:700; color:#9A6244; background:#F2E8DF; padding:3px 8px; border-radius:5px;">나쁜기름</span>
+          <span style="font-size:13px; font-weight:600; color:#312A25; flex:1; line-height:1.4;">앞의 20초만 보세요 (+ 댓글 확인 필수)</span>
+          <span style="flex:none; color:#B97A57; font-size:15px;">→</span>
+        </a>
+        <a href="https://www.youtube.com/watch?v=eX1Z3kz8Jjw" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:12px; padding:12px 15px; border:1px solid #E7DBCF; border-radius:13px; background:#fff;">
+          <span style="flex:none; font-size:10.5px; font-weight:700; color:#9A6244; background:#F2E8DF; padding:3px 8px; border-radius:5px;">좋은지방</span>
+          <span style="font-size:13px; font-weight:600; color:#312A25; flex:1; line-height:1.4;">버터? 코코넛? 어떤 지방을 먹을까?</span>
+          <span style="flex:none; color:#B97A57; font-size:15px;">→</span>
+        </a>
+      </div>
+
+      <!-- medical -->
+      <h3 style="font-size:15px; font-weight:700; margin:0 0 12px; color:#312A25;">임신 준비 전 필수 의학 영상</h3>
+      <div style="display:flex; flex-direction:column; gap:9px;">
+        <a href="https://www.youtube.com/watch?v=5LBQ882QD-M" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:12px; padding:13px 15px; border:1px solid #E7DBCF; border-radius:13px; background:#fff;">
+          <span style="flex:none; width:34px; height:34px; border-radius:9px; background:#FDECEC; color:#E23B3B; display:flex; align-items:center; justify-content:center; font-size:13px;">▶</span>
+          <span style="font-size:13px; font-weight:600; color:#312A25; flex:1; line-height:1.4;">언젠가 부모가 될 거라면 꼭 봐주세요 | 난임·노산·입덧·이유식</span>
+          <span style="flex:none; color:#B97A57; font-size:15px;">→</span>
+        </a>
+        <a href="https://www.youtube.com/watch?v=SdJsdGpyBqk" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:12px; padding:13px 15px; border:1px solid #E7DBCF; border-radius:13px; background:#fff;">
+          <span style="flex:none; width:34px; height:34px; border-radius:9px; background:#FDECEC; color:#E23B3B; display:flex; align-items:center; justify-content:center; font-size:13px;">▶</span>
+          <span style="font-size:13px; font-weight:600; color:#312A25; flex:1; line-height:1.4;">서울대 의사가 꼭 지켰던 3가지 임신준비 방법</span>
+          <span style="flex:none; color:#B97A57; font-size:15px;">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section id="end" data-screen-label="마무리" style="padding:32px 26px 48px; border-top:10px solid #F2E8DF;">
+      <div style="padding:26px 24px; background:#312A25; border-radius:18px; color:#fff;">
+        <p style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#D9B89E; font-weight:600; margin:0 0 12px;">기적을 이어가는 다음 단계</p>
+        <p style="font-family:'Gowun Batang',serif; font-size:18px; line-height:1.55; margin:0 0 16px; color:#FBF7F2;">오늘부터 딱 한 가지만이라도 배우자와 함께 시작해 보세요. 내 몸이 편안하게 이완되고 건강하게 피가 돌면, 아기는 반드시 찾아옵니다.</p>
+        <p style="font-size:13.5px; line-height:1.7; color:#D8CEC4; margin:0;">다음 <strong style="color:#fff;">임신 준비 시리즈 2탄</strong>에서도 찐 노하우를 아낌없이 풀어드릴게요. 여러분의 여정을 진심으로 응원합니다.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ======= BOTTOM TAB BAR ======= -->
+  <nav style="position:absolute; left:0; right:0; bottom:0; height:76px; background:rgba(251,247,242,0.94); backdrop-filter:blur(12px); border-top:1px solid #EADACC; display:flex; padding:8px 6px 18px;">
+    <button onclick="{{ goHome }}" style="flex:1; border:none; background:none; cursor:pointer; font-family:inherit; display:flex; flex-direction:column; align-items:center; gap:3px; color:{{ tHome }};">
+      <span style="font-size:19px; line-height:1;">◆</span><span style="font-size:10.5px; font-weight:600;">홈</span>
+    </button>
+    <button onclick="{{ goP1 }}" style="flex:1; border:none; background:none; cursor:pointer; font-family:inherit; display:flex; flex-direction:column; align-items:center; gap:3px; color:{{ tP1 }};">
+      <span style="font-family:'Nanum Myeongjo',serif; font-size:15px; font-weight:800; line-height:1;">01</span><span style="font-size:10.5px; font-weight:600;">식단</span>
+    </button>
+    <button onclick="{{ goP2 }}" style="flex:1; border:none; background:none; cursor:pointer; font-family:inherit; display:flex; flex-direction:column; align-items:center; gap:3px; color:{{ tP2 }};">
+      <span style="font-family:'Nanum Myeongjo',serif; font-size:15px; font-weight:800; line-height:1;">02</span><span style="font-size:10.5px; font-weight:600;">호르몬</span>
+    </button>
+    <button onclick="{{ goP3 }}" style="flex:1; border:none; background:none; cursor:pointer; font-family:inherit; display:flex; flex-direction:column; align-items:center; gap:3px; color:{{ tP3 }};">
+      <span style="font-family:'Nanum Myeongjo',serif; font-size:15px; font-weight:800; line-height:1;">03</span><span style="font-size:10.5px; font-weight:600;">체크</span>
+    </button>
+    <button onclick="{{ goP4 }}" style="flex:1; border:none; background:none; cursor:pointer; font-family:inherit; display:flex; flex-direction:column; align-items:center; gap:3px; color:{{ tP4 }};">
+      <span style="font-family:'Nanum Myeongjo',serif; font-size:15px; font-weight:800; line-height:1;">04</span><span style="font-size:10.5px; font-weight:600;">영상</span>
+    </button>
+  </nav>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:412,&quot;height&quot;:892}}">
+class Component extends DCLogic {
+  state = { active: 'home', done: {} };
+
+  componentDidMount() {
+    try {
+      const saved = JSON.parse(localStorage.getItem('circ_checklist') || '{}');
+      if (saved && typeof saved === 'object') this.setState({ done: saved });
+    } catch (e) {}
+
+    // Force video links to open at the top-level browser tab (helps break out of preview sandbox)
+    document.querySelectorAll('a[href^="http"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const w = window.open(a.href, '_blank', 'noopener,noreferrer');
+        if (!w) { try { window.top.location.href = a.href; } catch (err) { location.href = a.href; } }
+      });
+    });
+
+    const scroll = document.getElementById('scroll');
+    if (scroll) {
+      const ids = ['home', 'letter', 'p1', 'p2', 'p3', 'p4', 'end'];
+      const map = { letter: 'home', end: 'p4' };
+      scroll.addEventListener('scroll', () => {
+        const top = scroll.scrollTop + scroll.clientHeight * 0.35;
+        let cur = 'home';
+        for (const id of ids) {
+          const el = document.getElementById(id);
+          if (el && el.offsetTop <= top) cur = id;
+        }
+        cur = map[cur] || cur;
+        if (cur !== this.state.active) this.setState({ active: cur });
+      }, { passive: true });
+    }
+  }
+
+  go(id) {
+    const el = document.getElementById(id);
+    const scroll = document.getElementById('scroll');
+    if (el && scroll) scroll.scrollTo({ top: id === 'home' ? 0 : el.offsetTop, behavior: 'smooth' });
+  }
+
+  toggle(key) {
+    this.setState(s => {
+      const done = { ...s.done, [key]: !s.done[key] };
+      try { localStorage.setItem('circ_checklist', JSON.stringify(done)); } catch (e) {}
+      return { done };
+    });
+  }
+
+  renderVals() {
+    const done = this.state.done || {};
+    const active = this.state.active;
+    const tint = (id) => active === id ? '#B97A57' : '#B3A798';
+    const chk = (key) => ({
+      border: done[key] ? '#B97A57' : '#C9BBAC',
+      bg: done[key] ? '#B97A57' : 'transparent',
+      mark: done[key] ? '✓' : '',
+    });
+    const c1 = chk('c1'), c2 = chk('c2'), c3 = chk('c3');
+    return {
+      goHome: () => this.go('home'), goLetter: () => this.go('letter'),
+      goP1: () => this.go('p1'), goP2: () => this.go('p2'),
+      goP3: () => this.go('p3'), goP4: () => this.go('p4'),
+      tHome: tint('home'), tP1: tint('p1'), tP2: tint('p2'), tP3: tint('p3'), tP4: tint('p4'),
+      toggle1: () => this.toggle('c1'), toggle2: () => this.toggle('c2'), toggle3: () => this.toggle('c3'),
+      c1border: c1.border, c1bg: c1.bg, c1mark: c1.mark,
+      c2border: c2.border, c2bg: c2.bg, c2mark: c2.mark,
+      c3border: c3.border, c3bg: c3.bg, c3mark: c3.mark,
+    };
+  }
+}
+</script>
+</body>
+</html>
